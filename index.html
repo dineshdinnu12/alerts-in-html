@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<title>my web</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div class="container">
+<form action="file:///C:/Users/anvik/Desktop/htm%20animated%20css/index.html" autocomplete="off" onsubmit="return validation()">
+  <table class="main">
+      
+        <tr><td>user name <input type="text" name="user" id="user">
+		 </br><span id="userr"></span>
+		</td></tr>
+		   	 
+	    <tr><td>password <input type="password" name="pass" id="pass">
+		 </br><span id="passs"></span>
+		</td></tr>
+	       
+	    <tr><td>confirm password <input type="password" name="conpass" id="conpass">
+		 </br><span id="conpasss"></span>
+		</td></tr>
+	      
+		<tr><td>email<input type="email" name="email" id="email">
+		 </br><span id="emaill"></span>
+		</td></tr>
+	       
+	    <tr><td>mobile<input type="number" name="mobile" id="mobile">
+		 </br><span id="mobilee"></span>
+		</td></tr>
+	     	
+		<tr><td> <input type="submit" name="submit" id="id"></td></tr>
+     
+	 
+   </table>
+</form>  
+</div> 
+<script type="text/javascript">
+   function validation()
+   {
+     var user= document.getElementById('user').value;
+     var pass= document.getElementById('pass').value;	 
+     var conpass= document.getElementById('conpass').value;
+	 var email= document.getElementById('email').value;
+	 var mobile= document.getElementById('mobile').value;
+	 
+	 
+         if(user == "")
+	     {  
+          document.getElementById('userr').innerHTML="**user name must be contain**";
+		 return false;
+         } 
+		 if(pass.length<6)
+		 {
+		  document.getElementById('passs').innerHTML="**please enter 6 numbers above**";
+		  return false;
+		 }
+		 if(conpass == "")
+		 {
+		 document.getElementById('conpasss').innerHTML="**enter same password**";
+		 return false;
+		 }
+		 if(email == "")
+		 {
+		 document.getElementById('emaill').innerHTML="**enter emial adress**";
+		 return false;
+		 }
+		 if(mobile =="")
+		 {
+		 document.getElementById('mobilee').innerHTML="**enter mobile number**";
+		 return false;
+		 }
+		 
+		 
+
+   }
+</script>
+</body>
+</html>
